@@ -1,4 +1,3 @@
-
 function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
@@ -21,6 +20,24 @@ function onReady() {
     toDoList.appendChild(newLi);
 
     newToDoText.value = '';
+    function destroyFirst(){
+        var list = dom.byId("list"),
+            items = list.getElementsByTagName("li");
+
+        if(items.length){
+            domConstruct.destroy(items[0]);
+        }
+    }
+    function destroyAll(){
+        domConstruct.empty("list");
+    }
+
+    // Connect buttons to destroy elements
+    on(dom.byId("destroyFirst"), "click", destroyFirst);
+    on(dom.byId("destroyAll"), "click", destroyAll);
+
+
+
 
    });
 }
