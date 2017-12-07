@@ -19,11 +19,7 @@ function onReady(){
     newToDoText.value = '';
 
   });
-
-
-
-
-  var checked = document.querySelectorAll('input:checked');
+var checked = document.querySelectorAll('input:checked');
 
 if (checked.length === 0) {
     // there are no checked checkboxes
@@ -34,17 +30,15 @@ if (checked.length === 0) {
 }
 
 
-    deleteToDo.addEventListener('click', removal => {
-    removal.preventDefault();
 
+   deleteToDo.addEventListener('click', removal => {
+    removal.preventDefault();
     let selected = document.querySelectorAll('#toDoList li input:checked');
       for(var i = 0; i < selected.length; i++){
        selected[i].parentNode.parentNode.removeChild(selected[i].parentNode);
       }
     });
 }
-
-
 
 
 
