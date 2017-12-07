@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do App</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+
+    <title id="bang">To-Do App</title>
   </head>
   <body>
     <h1>To-Do App</h1>
     <form id="addToDoForm">
+      <ul id="toDoList">
+
+      </ul>
+      <p>Click the button to get the node name of the parent node of the li element in the list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+
+
       <label for="newToDoText">New To-Do:</label>
-      <input type="text" id="newToDoText">
-      <button type="text id="newToDoText">
+      <input id="newToDoText" type="text">
+      <button type="submit">Add To-Do!</button>
+      <button id="deleteToDo">Delete</button>
     </form>
-    <form>
-    <button id="destroyFirst">Destroy the first list item</button>
-    <button id="destroyAll">Destroy all list items</button>
-  </form>
-    <ul id="toDoList">
-    </ul>
-    <script src="app.js"></script>
+    <script src="index.js"></script>
   </body>
- </html>
+</html>
