@@ -1,5 +1,6 @@
 //1)) Build the function that will control everything.
 function onReady() {
+<<<<<<< HEAD
 
 //2) Event listener - this accesses the HTML form element.
   const addToDoForm = document.getElementById('addToDoForm');
@@ -10,23 +11,54 @@ function onReady() {
     event.preventDefault();
 
     let title = newToDoText.value;
+=======
+  let toDos = [];
+  function createNewToDo() {
+    if (!newToDoText.value) {return; }
+  toDos.push({
+    title: newToDoText.value,
+    complete: false
+  });
+  newToDoText.value = '';
 
-    let newLi = document.createElement('li')
+  renderTheUI(toDos);
+}
+>>>>>>> checkpoint-8-simpleToDo-P2
 
-    let checkbox = document.createElement('input');
+function renderTheUI() {
+  const toDoList = document.getElementById('toDoList');
+  toDoList.textContent = '';
+  toDos.forEach(function(toDo) {
 
+    const newLi = document.createElement('li');
+
+    const checkbox = document.createElement('input');
     checkbox.type = "checkbox";
 
-    newLi.textContent = title;
+    const title = document.createElement('span');
 
-    newLi.appendChild(checkbox);
+    newLi.textContent = toDo.title;
 
     toDoList.appendChild(newLi);
-
-    newToDoText.value = '';
-
-   });
+    newLi.appendChild(checkbox);
+  });
 }
+
+addToDoForm.addEventListener('submit', event => {
+  event.preventDefault();
+  createNewToDo();
+
+});
+
+ renderTheUI(toDos);
+}
+//The HTML form, so that we can create a new to-do when the user submits the form.
+  const addToDoForm = document.getElementById('addToDoForm')
+//The text input, so that we can get the text for the title of each to-do.
+  const newToDoText = document.getElementById('newToDoText')
+//The todo list itself so we can re-render it when we add or remove todo items.
+const toDoList = document.getElementById('toDoList')
+
 
 
 
