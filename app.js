@@ -45,7 +45,7 @@ addToDoForm.addEventListener('submit', event => {
   const newToDoText = document.getElementById('newToDoText')
 //The todo list itself so we can re-render it when we add or remove todo items.
 const toDoList = document.getElementById('toDoList')
-}
+
 
 
 
