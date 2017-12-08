@@ -19,19 +19,9 @@ function onReady(){
     newToDoText.value = '';
 
   });
-var checked = document.querySelectorAll('input:checked');
-
-if (checked.length === 0) {
-    // there are no checked checkboxes
-    alert('no checkboxes checked');
-} else {
-    // there are some checked checkboxes
-    alert(checked.length + ' checkboxes checked');
-}
 
 
-
-   deleteToDo.addEventListener('click', removal => {
+    deleteToDo.addEventListener('click', removal => {
     removal.preventDefault();
     let selected = document.querySelectorAll('#toDoList li input:checked');
       for(var i = 0; i < selected.length; i++){
@@ -42,7 +32,7 @@ if (checked.length === 0) {
 
 
 
-
+document.querySelectorAll('#items-listed li input:checked')
 window.onload = function(){
   alert("The window has loaded!");
   onReady();
