@@ -1,6 +1,9 @@
-
+//1)) Build the function that will control everything.
 function onReady() {
+
+//2) Event listener - this accesses the HTML form element.
   const addToDoForm = document.getElementById('addToDoForm');
+
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
   addToDoForm.addEventListener('submit', () => {
