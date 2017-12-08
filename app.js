@@ -1,17 +1,4 @@
-//1)) Build the function that will control everything.
 function onReady() {
-<<<<<<< HEAD
-
-//2) Event listener - this accesses the HTML form element.
-  const addToDoForm = document.getElementById('addToDoForm');
-
-  const newToDoText = document.getElementById('newToDoText');
-  const toDoList = document.getElementById('toDoList');
-  addToDoForm.addEventListener('submit', () => {
-    event.preventDefault();
-
-    let title = newToDoText.value;
-=======
   let toDos = [];
   function createNewToDo() {
     if (!newToDoText.value) {return; }
@@ -23,7 +10,6 @@ function onReady() {
 
   renderTheUI(toDos);
 }
->>>>>>> checkpoint-8-simpleToDo-P2
 
 function renderTheUI() {
   const toDoList = document.getElementById('toDoList');
