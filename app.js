@@ -39,6 +39,7 @@ addToDoForm.addEventListener('submit', event => {
 
  renderTheUI(toDos);
 }
+
 //The HTML form, so that we can create a new to-do when the user submits the form.
   const addToDoForm = document.getElementById('addToDoForm');
 //The text input, so that we can get the text for the title of each to-do.
