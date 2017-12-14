@@ -14,7 +14,8 @@ function onReady() {
 function renderTheUI() {
   const toDoList = document.getElementById('toDoList');
   toDoList.textContent = '';
-  toDos.forEach(function(toDo) {
+
+toDos.forEach(function(toDo) {
 
     const newLi = document.createElement('li');
 
