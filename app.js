@@ -38,6 +38,7 @@ addToDoForm.addEventListener('submit', event => {
 });
 
  renderTheUI(toDos);
+
 }
 
 //The HTML form, so that we can create a new to-do when the user submits the form.
